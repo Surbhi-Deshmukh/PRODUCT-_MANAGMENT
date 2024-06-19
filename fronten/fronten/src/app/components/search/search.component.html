@@ -1,0 +1,42 @@
+<!--Search the product-->
+<div ngNativeValidate class="container">
+    <div class="row">
+        <div class="col-lg-9 col-sm-9 col-xs-12 mt-5">
+        <input type="text" placeholder="Search Here" class="form-control" name="productName" [(ngModel)]="productName" required>
+        </div>
+          <select class="btn btn-outline-info" [(ngModel)]="message" name="filter" id="filter">
+            <option value="brand">Brand</option>
+            <option value="code">Code</option>
+            <option value="name">Name</option>
+          </select>
+          <button type="botton" class="btn btn-info mt-2" (click)="searchByproductName()">Search  </button>
+          <div>
+    
+   </div>
+   
+    <table class="table container mt-4 border" *ngIf="product">
+        <thead>
+         
+          <tr class="bg-info text-dark">
+            <!--<th scope="col"></th>-->
+           <th scope="col">Brand Name</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Code</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+         
+        <tbody class="container" >
+           
+          <tr *ngFor="let item of product">
+
+            <th>{{item.brandName}}</th>
+            <th>{{item.productName}}</th>
+            <th>{{item.code}}</th>
+        
+       <th> <button *ngIf="product!=null" routerLink="/addreviews/{{item.productId}}" type="button"  class="btn btn-outline-success">Add Review</button>&nbsp;
+        <button  *ngIf="product!=null" routerLink="/view-review/{{item.productId}}" type="button"  class="btn btn-outline-danger">View</button>
+    
+</th></tr></tbody>
+ <div class="text-danger bold">{{message}}</div>
+    

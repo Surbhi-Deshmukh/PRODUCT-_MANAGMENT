@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<table class="table container mt-4 border">
+  <thead>
+    <tr class="bg-info text-dark">
+      <!--<th scope="col"></th>-->
+      <th scope="col"></th>
+      <th scope="col">Code</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Brand Name</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of collection">
+      <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th>{{item.code}}</th>
+      <th>{{item.productName}}</th>
+      <th>{{item.brandName}}</th>
+      <th> <button routerLink="/addreviews/{{item.productId}}" type="button" class="btn btn-outline-success">Add
+          Review</button>&nbsp;
+        <button type="button" routerLink="/view-review/{{item.productId}}" class="btn btn-outline-danger">View</button>
+
+      </th>
+    </tr>
+  </tbody>
+</table>

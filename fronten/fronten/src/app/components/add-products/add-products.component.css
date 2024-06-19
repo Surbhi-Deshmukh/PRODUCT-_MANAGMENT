@@ -1,0 +1,36 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .col-sm-6 {
+    width: 50%;
+  }
+  
+  .form-horizontal {
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .control-label {
+    font-weight: bold;
+  }
+  
+  .col-auto {
+    margin-top: 10px;
+  }
+  
+  .btn-info {
+    background-color: #173db8;
+    color: white;
+  }
+  
+  .btn-info:hover {
+    background-color: #3339ee;
+  }
+  

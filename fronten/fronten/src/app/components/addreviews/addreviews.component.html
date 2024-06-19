@@ -1,0 +1,27 @@
+<!-- Add Reviews on Products-->
+<div class="container-fluid">
+    <div class="col-sm-6">
+        <!--form tag starting -->
+        <form class="form-horizontal"[formGroup]="review"  name="myform" (ngSubmit)="addReview()">
+            <div class="form-group">
+                <label class="control-label col-sm-3" id="review" for="productName">Review</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="review" formControlName="review" required placeholder="Enter the review" >
+                </div>
+            </div>
+            <div class="form-group">
+               
+                <label class="control-label col-sm-3" id="rating" for="name">Rating</label>
+                <div class="col-sm-6">
+                    <input type="text" min="1" max="5"class="form-control" id="rating" formControlName="rating"required  placeholder="Enter the rating from 1 to 5">
+                </div>
+            </div>
+            <div class="buttn1">
+                <!--Button -->
+                <div class="col-auto">
+                    <input  type="submit"  id="bt" class="btn btn-info" value="Submit" />
+                </div>
+            </div>
+        </form>  <!--Form tag ending--> 
+    </div>
+</div>  
